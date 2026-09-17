@@ -1,0 +1,16 @@
+CREATE TABLE IF NOT EXISTS sites (
+  id SERIAL PRIMARY KEY, name TEXT NOT NULL, latitude DOUBLE PRECISION NOT NULL,
+  longitude DOUBLE PRECISION NOT NULL, radius_km DOUBLE PRECISION NOT NULL, created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+CREATE TABLE IF NOT EXISTS observations (
+  id SERIAL PRIMARY KEY, site_id INTEGER NOT NULL REFERENCES sites(id), pollutant TEXT NOT NULL,
+  observed_at TIMESTAMPTZ NOT NULL, value DOUBLE PRECISION NOT NULL, unit TEXT NOT NULL, source TEXT NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(), UNIQUE(site_id, pollutant, observed_at)
+);
+CREATE TABLE IF NOT EXISTS anomalies (
+  id SERIAL PRIMARY KEY, observation_id INTEGER NOT NULL UNIQUE REFERENCES observations(id), baseline DOUBLE PRECISION NOT NULL,
+  deviation_percent DOUBLE PRECISION NOT NULL, z_score DOUBLE PRECISION NOT NULL, severity TEXT NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+INSERT INTO sites (id, name, latitude, longitude, radius_km) VALUES (1, 'Dandora Dumpsite', -1.2467, 36.9068, 4.5) ON CONFLICT (id) DO NOTHING;
+

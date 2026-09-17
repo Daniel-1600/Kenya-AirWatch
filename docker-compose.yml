@@ -1,0 +1,13 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: airwatch
+      POSTGRES_PASSWORD: airwatch
+      POSTGRES_DB: airwatch
+    ports:
+      - "55432:5432"
+    volumes:
+      - airwatch_pg_v1:/var/lib/postgresql/data
+volumes:
+  airwatch_pg_v1:
