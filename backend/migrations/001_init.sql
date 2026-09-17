@@ -13,4 +13,4 @@ CREATE TABLE IF NOT EXISTS anomalies (
   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 INSERT INTO sites (id, name, latitude, longitude, radius_km) VALUES (1, 'Dandora Dumpsite', -1.2467, 36.9068, 4.5) ON CONFLICT (id) DO NOTHING;
-
+INSERT INTO sites (id, name, latitude, longitude, radius_km) VALUES (2, 'Gioto Dumpsite, Nakuru', -0.2789, 36.0489, 4.5) ON CONFLICT (id) DO NOTHING;

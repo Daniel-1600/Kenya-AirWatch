@@ -36,25 +36,34 @@ func main() {
 		panic(err)
 	}
 	repo := repository.Repo{DB: db}
-	obs, err := provider.Fetch(-1.2467, 36.9068, 4.5, from, to)
+	sites, err := repo.Sites(ctx)
 	if err != nil {
 		panic(err)
 	}
-	var prev []float64
-	for _, o := range obs {
-		m := models.Observation{SiteID: 1, Pollutant: "CH4", ObservedAt: o.ObservedAt, Value: o.Value, Unit: o.Unit, Source: o.Source}
-		inserted, err := repo.InsertObservation(ctx, 1, m)
+	total := 0
+	for _, site := range sites {
+		obs, err := provider.Fetch(site.Latitude, site.Longitude, site.RadiusKM, from, to)
 		if err != nil {
-			panic(err)
+			panic(fmt.Errorf("site %d (%s): %w", site.ID, site.Name, err))
 		}
-		score := anomaly.Score(o.Value, prev)
-		prev = append(prev, o.Value)
-		if score.Severity != "normal" {
-			if err := repo.UpsertAnomaly(ctx, inserted, score.Baseline, score.DeviationPercent, score.ZScore, score.Severity); err != nil {
+		var prev []float64
+		for _, o := range obs {
+			m := models.Observation{SiteID: site.ID, Pollutant: "CH4", ObservedAt: o.ObservedAt, Value: o.Value, Unit: o.Unit, Source: o.Source}
+			inserted, err := repo.InsertObservation(ctx, site.ID, m)
+			if err != nil {
 				panic(err)
 			}
+			score := anomaly.Score(o.Value, prev)
+			prev = append(prev, o.Value)
+			if score.Severity != "normal" {
+				if err := repo.UpsertAnomaly(ctx, inserted, score.Baseline, score.DeviationPercent, score.ZScore, score.Severity); err != nil {
+					panic(err)
+				}
+			}
+			fmt.Printf("[%s] %s %.1f %s baseline=%.1f z=%.2f\n", site.Name, o.ObservedAt.Format("2006-01-02"), o.Value, score.Severity, score.Baseline, score.ZScore)
 		}
-		fmt.Printf("%s %.1f %s baseline=%.1f z=%.2f\n", o.ObservedAt.Format("2006-01-02"), o.Value, score.Severity, score.Baseline, score.ZScore)
+		fmt.Printf("ingested %d observations for %s in %s mode\n", len(obs), site.Name, mode)
+		total += len(obs)
 	}
-	fmt.Printf("ingested %d observations in %s mode\n", len(obs), mode)
+	fmt.Printf("ingested %d total observations across %d sites in %s mode\n", total, len(sites), mode)
 }
