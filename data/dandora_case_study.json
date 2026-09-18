@@ -1,0 +1,2507 @@
+{
+  "schema_version": 1,
+  "title": "Dandora regional methane observation case study",
+  "generated_at": "2026-09-18T12:24:08.571206+00:00",
+  "site": {
+    "name": "Dandora Dumpsite",
+    "latitude": -1.2467,
+    "longitude": 36.9068,
+    "radius_km": 4.5
+  },
+  "period": {
+    "from": "2025-01-01",
+    "to": "2026-09-15"
+  },
+  "method": {
+    "collection": "s5p_tropomi_l2_ch4",
+    "catalog": "https://explorer.digitalearth.africa/stac/search",
+    "spatial_summary": "Arithmetic mean of valid CH4 pixels whose centres fall within the analysis radius.",
+    "highlight_rule": "Largest positive z-score after at least 10 earlier valid observations; population standard deviation.",
+    "scientific_boundary": "Regional column-averaged methane observations do not identify or attribute a point source."
+  },
+  "retrieval": {
+    "matched_items": 563,
+    "valid_observations": 31,
+    "skipped_items": [
+      {
+        "item_id": "4128add4-5e0f-5e36-a2f2-90ab3e4ded85",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "4ae7cbc0-354b-5bae-b534-8b515ba42bd2",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "fac5a03b-1e62-5f5a-9048-73f3f028f627",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "986f893a-ef9c-54a0-a5f7-9309c2a1d9e1",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "8f6f3da7-19b3-5776-a76a-2953695e07c2",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "87b7af4b-9187-547c-b2ca-471fa8cf2407",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "2e0470bf-3c52-5b7e-827e-a06eb43e00be",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "4511a846-305f-5485-bfe2-25b1e6837998",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "aff4a9e8-0aab-5c64-8250-67ff050587d0",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "be5c8d42-c936-5fd0-b786-86d176c3ae04",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "951fed42-34e7-52ff-8ae0-7a1f33ab221f",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "9672ce67-0f13-578f-b69b-69663f4b090f",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "f5a6ecf0-f03e-569e-a0a8-f353d9c651e1",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "040c9e90-1985-5971-8268-014b1fd9dca7",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "726ea112-42d1-56da-b446-88e84f9549fd",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "981d255e-199b-5cc0-9977-0b65a698c008",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "cd9945a7-397c-5250-afda-08bf84f8b347",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "3320ee2d-041d-5aff-8b3e-792846d025ae",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "789a2f25-38bd-5ce6-8a02-2fd246ef4e6e",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "671b0dcb-f6e6-5d4e-9a96-af52ccd4701b",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "a4049c88-a949-5144-a959-29e4bbd9a9ce",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "4fbdd2a4-4924-5b45-b0f7-bbd7df612d4d",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "e875afcf-dad4-5e96-ab3e-7777fdbcbf4a",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "f9b5cc46-99be-56d0-b159-0d5a4a04c540",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "465decc0-cd0f-5b07-9009-9c9d3114d18e",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "ab9a5d49-d2df-5165-bdd2-33cc65b1f6c9",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "d22578e0-8136-5b5c-90d3-7bd8e5644414",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "39ca0b91-cd26-5df2-bb3c-49f5853054c8",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "afe4c9e7-4013-5ca3-9c52-1bacc5080fc0",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "283facce-6b37-5db5-abd6-c77517c17b8e",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "adcfcf45-8e14-535f-9e0a-ffed21f9b619",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "b4efd52c-61de-5e2e-92dd-180d449ba12f",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "71f87fe3-51db-5af5-801a-690f4290aeb8",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "5da515cd-8618-55be-a588-b59dde1f9ded",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "50738065-f59b-520c-b5b9-a838119d868b",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "d001410d-7783-545e-bf24-f52ab1de83c7",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "f49ead18-529a-59dc-b798-e708b885c14a",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "2aa36545-3ec2-5b96-8898-623642aa3fb2",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "7748b4c5-dd8d-5e54-aaa0-da9822c8ccce",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "62f98545-51f4-5495-97c1-b0877802d7ac",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "b0ee03ca-dae1-590a-8ee7-ea3f78be4d60",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "373d8a27-4679-5f6c-9631-0c4fefe78f46",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "8ce0743c-acbf-5a32-804e-ecd970774eda",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "8b743361-fc66-5e80-8bbb-f1446d39e100",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "fad21f02-9f47-5b6d-8fcc-a4a214e6b923",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "635969b7-ebc2-51df-95e4-de9e18b707fb",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "08320c0b-ec92-58f3-9969-eee715db2712",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "e466c65c-e930-550b-8907-9d5dfc49288b",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "8cea5cf3-902e-5cbb-b08d-4c9158c86c2e",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "3ebc30a2-1702-57e7-b5b8-49bed16182a3",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "f57b91cb-49ef-56d4-bf49-a1f8881460f3",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "8d23c317-06bf-5ece-8a03-e97640d03992",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "cc8537be-d62b-5ed4-a8d9-87c7ec287c8a",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "d7985b4b-fdc7-5008-b916-0324c271f22a",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "cab9ec93-c9c6-518c-ae70-c15f35419ad5",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "c4baf2cd-5250-59d7-b352-de04c31786a0",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "33b2b258-23e1-5226-bf35-c40eb1ffcd01",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "8dbff17f-1f57-51a3-9734-d7f575690713",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "d6571086-573f-503a-ae75-082f9ec9cea5",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "111cc956-539a-52a9-a127-37af630bd9f5",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "b5917a93-92cb-5f04-bb4b-7091d42dd3c4",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "d4ca6748-0b94-535d-be46-e78c8c0adfc2",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "21798f9e-5895-59d2-982a-48adf9ef467e",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "051cc3a6-6b82-5c87-b4c7-500e0b68e3b6",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "cbeee518-84d9-5d4e-a4d7-6d09df51aa2e",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "418804f1-0da0-5071-a8fa-9250252b4128",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "0b95bf9c-f7db-5d4c-a226-da0044ef965e",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "8f572468-b702-52c7-bae7-30b66513c2ee",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "9b6e2f79-c0f4-5757-8289-6e8404f434db",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "c23f0972-061a-52e9-b1ab-3df86c61b958",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "66650e08-74db-54a8-b13d-4900466c187b",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "61314caa-e35d-5233-a976-79cd9eed7db9",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "332c0aa9-1784-5dc9-b911-2a6b24463357",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "02c2db5b-c55f-5870-a4fa-7cea35a82392",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "f355f289-eb9c-5a9d-bae9-d1bb51fed6e4",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "723e8dbd-cae5-5c36-96cf-73aef89e2aa4",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "8d318b30-f1f2-5e15-b561-e487e3b375eb",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "25ff5b82-4282-55d8-bd5a-2927d333abc0",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "250597de-0b0f-5e93-8cd2-9e8a18942aaa",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "bdf37d9a-eea0-5d5c-876b-d234e2231767",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "9c698ddd-db01-50fd-9556-a6b749419474",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "b094d9eb-74d3-5cd7-b2f5-d15da4677924",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "fd9167bb-48b5-5421-9b84-38ccbcc867cb",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "f19519f2-d7bd-5958-8a00-4427ff68df56",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "4b2f76d3-ec18-5daa-b875-6e9b6747a7aa",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "784d3e4b-c29d-5750-81e0-72a240454600",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "2dd6b70a-31e5-5801-9cc7-d50994c33b68",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "65457e2f-bbd5-5d64-a4ff-749490efd6fb",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "be7cfb6f-4535-5656-af19-e04f334086ca",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "eec713fa-535b-5618-b86d-ec202123362d",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "0c70c976-5021-518a-8e00-6bc6b6b42270",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "71a84561-f974-513a-8b74-458952cb3118",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "101fbf31-795f-5858-9512-56d0bc914b27",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "41497382-8318-5fed-bc1d-f3effe700694",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "eb33afe3-c00c-59cb-a9ba-a1300d9f664f",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "2160f5c8-bfd0-5576-896b-9fc2107907af",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "5ad0a90d-4c4b-5961-a5d5-b4332abf199a",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "873df503-1220-590d-a0f6-a1a78b124413",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "09b47ab8-ee0e-5a5c-942c-ffd6313dfccd",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "fdfebf95-8018-5fb9-bbde-e419ded5d3a9",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "8e265b9c-5719-52ca-ab84-e24aec40e05b",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "43ff8554-d1d5-5e04-b281-f175c8ff8059",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "5fee2054-bd20-59dd-ad93-f40920e5d4c0",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "728c6ee4-4595-592d-8f4a-d4cb4301cae9",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "ef59a8dc-133b-5ecb-a7f5-da7e929ed7fd",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "317a0fe5-b2ad-5803-971a-bd6751f79c30",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "2cbe1969-db17-5658-8fc1-7bd03b5c16b4",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "9dd9e3c5-2bb2-50d5-8bdb-978862506c2f",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "d82340c3-3b0b-5450-9077-ea0d3729da11",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "d613b380-6d2b-53a8-b825-2d378c087966",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "f0dd7ced-f2be-51b0-a1c7-b8d409a02379",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "2198bf2f-1cdb-56bf-b996-8a5515f29681",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "622d10a7-e368-5b90-8a4f-ea19b51fca9f",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "8717d6be-4a06-50e2-909b-7c157b6e9aa4",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "d3996afe-db92-5fd0-bd85-ba96d5102d0d",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "01507cbe-c557-5ef1-9fa4-0436a47cebff",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "829dd178-08cc-531d-91d1-1d4762df0657",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "bfd51a76-4b3b-5723-9cce-db6cada67f55",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "fba71117-270d-5fee-a119-725c22dfb9e8",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "1ef03e2f-be2b-5c07-a846-39e4e478db5f",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "bb64134a-8297-5ae1-be21-02138e96838f",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "4ffdde3d-7c5b-50c2-90f0-4fe1eb886a86",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "a189bd79-e2aa-5f61-9171-3a80e158937c",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "4c630778-b25d-59d4-9b05-b72b7dbdd69c",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "0815a932-15d3-559e-a860-da98ac9faa86",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "683fb8a0-ac37-536e-b94a-53fc47490385",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "66c12fec-6041-587d-9b8d-1c3de61f6e91",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "c7c7fc96-d171-5abd-b515-9432e880f592",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "69c8653e-6082-571d-a491-5d46c0d7a879",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "00a9f0bf-ce6a-5269-8058-a161e3f2400e",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "a798a591-5517-57d9-94e4-6ec0bc8d93a7",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "2ac32e04-afb5-57a7-8d75-36c0734895a0",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "c46c0143-b6c7-53e7-9b0c-68b55f36345c",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "80702cbd-ed4b-5134-8faa-07181ebe64bd",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "f3fa7ff5-b861-5be7-a613-67bfdc165ca3",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "861556fb-bfb1-52e9-ac05-13165d309625",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "4dab0ba3-ab08-5a71-8219-a2b02b2838ce",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "ea3e1ecb-8c56-5d34-ad86-e4f17a30f6f1",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "dad02310-d796-5a62-84cf-16c9e7d9d8f1",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "4d1980f2-5d8d-591c-812a-be2e4a0327a4",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "52593326-e101-5f90-b621-debda882f05d",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "a8ea6e23-8fc7-5d3e-b8a5-ac57ff6cfa49",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "f26d2159-d319-5a12-878f-35d5cdf4bb36",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "3e2f5a0a-3954-55d9-aeda-57e7ae721e75",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "dc768a41-4894-5cd3-b20c-7755611aac27",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "9a4662d2-6599-52e7-9439-1506d33a890b",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "cae81fce-c970-507f-8766-8178547bc1cc",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "af734d33-ed62-5039-b360-2b9fd310013c",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "6a32398f-8e22-5268-9459-7194ee25b66b",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "6c0961e2-cee3-5aca-a98f-61291da9af6c",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "46b98ef4-77f2-51ba-87d2-8e295867aa84",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "6724a828-5a40-568b-8d29-f5e0b2ad743e",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "91723553-6473-5d2f-bc34-568c6723e03a",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "0598960d-d657-5ced-b4c6-dbea847b3f5c",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "7cacce36-efdf-5668-8746-c7b1194fca33",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "2ad244ff-2166-5643-af15-1653f08e3bfa",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "f9cf16e6-d798-567d-b9e9-f3aa9e82a9c6",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "ffafb5c9-fd80-5e6e-808d-758c9a8e7dac",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "b0499262-a205-5a76-8398-f8ceb8a8554d",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "c1f44139-eb95-5f7f-b7df-5aea9ed11fce",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "172c63fc-6ece-544a-a449-fde0120aa6c4",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "c6be7d8d-735c-5afd-a1f7-368e13d32e8f",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "e2536ff2-b875-5d25-9fee-c0eadb89d83b",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "5b63d151-d6d2-5dc0-b62c-6114289d3c24",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "c0f8abc5-48f7-56b2-9d20-3ca85da1871f",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "a7cab49e-7c75-5d35-a788-b91fbeedb94b",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "3158ea24-a4ff-54e9-b2f7-2c86511a690c",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "bd36c186-5782-5935-97e5-2e82da3df49d",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "d2b45a93-024a-5aa3-9865-2090af5c87f1",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "ac3d2933-e2e2-53bc-84d0-2e861dc38683",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "1742a4f6-4a6e-56b2-90fb-54b02cbd4568",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "02019371-4b85-5747-9b7c-0d3dc58b0ed3",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "f0bc7b97-cdc6-5b58-8381-7b0d63012d73",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "59648fad-542f-568d-9057-edf19168e403",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "e5858ce3-f9fd-51d1-9047-f0170d7c42f4",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "c8665202-3ce0-55c4-96db-d35834f99fbd",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "371469a4-7521-57fc-920d-14d4fd6c5cfe",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "2b39f97d-134d-5a94-8d2b-e21b5f2cbfb9",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "cc361209-48b4-5b71-88bb-1f7423d93813",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "7efb287b-02e2-5282-9ce9-17470f01ce40",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "0c41f606-1bff-5ac0-b02b-62f28d6289d8",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "e08625da-20a7-53c2-85ce-e02d937652e6",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "9155600c-dce9-56a5-bed5-67cf552718e7",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "ddb0f1b2-fda1-51a7-945e-116c22d73ff9",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "05b08aeb-2f4f-5cf7-a988-4c5f6d174b14",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "7c8299c3-facb-5ae0-8120-d2a309313dd9",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "30a300a6-7cde-5c5f-b715-9242cb85ff98",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "a606a5c9-fd60-5a9f-8ac0-730f1b665b5b",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "f3a290f7-0165-5e65-9427-801823275fac",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "665d5e4e-b4f4-52c1-a8bb-1b8dd7caf434",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "6a4d559e-a8c9-5494-afe1-a68dcf10e01a",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "d2d4c05d-b03c-5977-80cc-771ecc07ff54",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "0eddce8c-4496-59ea-9011-87285a53b49d",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "cae6f583-83d5-5f08-b230-1c6831276281",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "d8369cc4-e17f-5c95-80e9-9633ba57c405",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "f28ddcdd-8054-56d7-8f5a-74e4af1d6604",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "fa0d1432-2714-5fb1-893b-3b100a5cdfc6",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "4b957820-f7a8-56df-8f91-36519fe0ec13",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "13f00ac0-62da-5f72-9764-3794b29a163d",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "fc2cb6c0-8761-5405-a771-48281649f8f6",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "b1d30aca-87ae-5326-87f5-9f929b1c9559",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "b45094c2-7a60-579a-863c-b422f09a6cf6",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "d070cacf-b8ad-5106-b5a0-0ccd0763ad09",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "33bfff6c-08f0-54e7-ba25-0a2d686cb612",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "d0493aa1-39a8-560c-89ec-a5764f4eea9b",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "3f72bec7-5e41-536a-bb4a-a7abc093340f",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "47d49c5a-336c-5c78-87da-c7503b563955",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "68133e5c-6ea7-5fd5-a171-a929c05ddbc4",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "b0a00c23-b13c-5099-91d0-dec49759814d",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "32ddf772-0263-5cdc-ac1f-1703e03d7110",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "f34cc864-0f02-543f-adde-dcd0c5a17e16",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "fd5b2216-cb2b-522f-a9f1-741c8eefbb22",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "0edd7533-e225-550c-9d95-7b52f40be769",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "952f6cf9-6bae-5b86-879e-b186cd04c870",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "ad6dc7af-ab77-5000-ae79-4f2f47dbccb5",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "209857e8-9af1-50ba-9985-49569080b4a4",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "2fe8ca73-ae5b-5937-b86d-6804d329c159",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "3547cb4d-4a7d-5ac2-950e-14158a24440e",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "239d8dca-3337-57bf-9357-6c313f6e4281",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "4f21ffa5-9c78-5842-ab25-6a3be46f8f1c",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "addc105f-96f0-50de-bb10-50370707dfd4",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "564db0d7-ecec-5aff-b363-c88aa84e99ba",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "3a35763a-cd91-5188-a12b-5022951508eb",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "64999969-a4f9-5a18-8f7d-bcf334b0ca20",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "cb36e10b-e0f4-5b1f-9d9f-ed30c44688dd",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "eaf1bd1f-6c8f-5fb0-a1d6-42a209393423",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "aa5034c6-71f1-51e3-b633-6194f5f2f08d",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "3dccbf90-9576-57d5-8c02-799fd4a0e7cc",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "64ce19e6-b5cd-5bdf-a371-1ff1d5a22d34",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "70efe5c8-111e-5ccf-828f-0094a0603169",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "5970e8af-3d7b-5bc0-b1d8-ddfc6e98ff9a",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "417c3654-ba48-5793-b875-be0d502cff9c",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "64d7ede3-f930-5823-85c0-61ce7ae6bdb8",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "9962e931-e9cb-5503-bb80-65fb26a73bed",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "6b825657-d0c2-5a5b-a72e-00c9c9b40aa9",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "36bf49ea-7b20-589a-8cb7-9cd09015e847",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "e841315b-a2e6-5cd5-b135-7cf7e6382b92",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "72e07b94-2f7e-594b-94b0-f29fb3ba9dfd",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "e71d4358-5411-5e92-b920-1b8d553d525f",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "ccf59b27-d3c6-5fef-bb69-3da3f586306d",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "6f3b53d2-f2cb-5e48-97a6-f17d88db863a",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "0acdc789-ae2a-5987-9062-41b190ee168c",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "1bfbe8a2-c2a8-506b-9759-0e08ec1fcde2",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "c260388a-1b4f-5e5c-b020-00cac738b0f5",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "93189a9e-0b0a-59ce-af41-cc9ccdcdcd30",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "f272c7e5-7ad7-577b-8a4e-aacbfb98ebbd",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "135184ec-373c-59dc-ae8b-2528e6d49fde",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "62c1e3b8-af78-5ce5-ae81-ca3ba6291fed",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "9c108c9b-a657-5eb8-a7ef-0472bbabf16b",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "893f3de0-430e-5d74-af59-802d5b777bf2",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "39414899-2d44-5de0-8e1e-95740534d4f8",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "e8077a81-b52f-51d2-8ae4-a7e0d581a863",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "a002478f-2e99-53aa-a9ac-19aca9cf8bd4",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "5fb9c245-600d-525a-8ae7-0d6a5d81df28",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "c1a9b301-7c2a-5322-aca4-363aa22b2d56",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "2057fc37-a5f6-5314-b753-a98cc54a8a86",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "dff1eaaf-26f3-5491-b797-d641a41cdd64",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "cbf12aa4-f157-5c5d-b7ac-ebf1982c662e",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "0aa1dc2a-6600-54e9-8632-e510fb805de1",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "3632d197-4d3e-5200-9d9e-0cbd29788be9",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "cfe063e0-6ed2-5d38-b877-4db8f3730aa9",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "d6733e33-bbab-5d36-b062-b78863b0b31f",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "00acee47-1d20-5ba1-ace5-bbec54acf620",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "da43f226-f52d-5178-8159-8ae9a454e7af",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "d5f12e01-efa1-542d-9ba8-6de7335b7487",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "2bc73009-b14c-5156-94ed-02ffb25a4448",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "5cb1f27f-7a78-5959-b481-1129580c262e",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "0b70ca74-3065-5ca7-9eb9-f917d4f36d64",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "f681888b-011c-500a-8968-460080e4205d",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "f7952222-0a68-5330-94a9-5a9026e72f08",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "55bd5cf5-cd35-5f75-95ba-37fe4a7f4ba9",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "05b81ee4-5bf1-5e38-868f-fcb0214fd83a",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "04f982dc-526f-5a99-8b73-6fd7de293bc8",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "0e15a2b1-ab7a-509e-ae68-8c5d43104cca",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "fa6c0117-4b8b-5d66-852d-802d43b8ef6e",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "5f633cdc-677d-5e29-84b9-adc2f961418c",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "136e22d9-7533-5ad4-a576-edc95bfbcc84",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "5c0a375b-7acf-5088-8514-fac8db8c97e7",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "15738f2f-b4df-597d-80ec-ee2e7b9d45b2",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "00a93808-414f-5647-abca-9ffdff2d41c7",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "7c5ac519-e07c-5a33-9e7a-4117dea57897",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "69043f0b-ccd8-5277-a98d-8d161b3f9f98",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "a8b677f6-2d02-5204-ac4d-78c19803154a",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "03290da3-c8cc-53fb-a318-552b70d2b08f",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "d49c1521-ca0b-54a1-91eb-41c3126500fc",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "d5b5edba-d1b9-56a9-8bea-7a194cf62ee3",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "9290863d-160e-5a26-afbe-c2ed02c43e2a",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "b46450e1-20da-5021-a8c1-2a66570bc03f",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "2e354d92-a477-5bd4-ad9f-3be90bdfc8a5",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "f4a8ff72-d296-573f-b313-3c521cee4c1d",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "e01cfc40-b3b2-5b5f-8911-fd02237a5058",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "bfae4c4b-43cb-5b40-a966-92929bd69e87",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "4b262add-5454-5d23-b07b-5c8e0df19c98",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "32e97a23-b91c-5f27-b89f-1566df6a3d59",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "2a1705d9-5395-5b36-9312-93b29c6b356b",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "04b018ce-9fcb-5b34-a5a9-75a7eb52f78e",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "69c54bc1-3305-5490-b769-2369e47c3c38",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "5cfb89c3-ebdc-5f13-9180-4924387f7751",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "cbe1f4a9-5ce7-572c-958b-27edd540012d",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "66872979-7013-57b9-a45a-185ce5419c4f",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "59b55e29-8b8a-54bf-8371-88d4d70eba48",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "5d22ebb1-3a60-5d3e-9618-43520fb468e7",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "03d7d2b7-8152-5427-aef3-e83a846528ed",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "817f12bc-be7e-5497-a6eb-328c6fa1f6d1",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "6ed34d88-de37-561d-bfff-7882fa342649",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "ba0423fa-e36b-5be9-8be9-76bbd82d7d4d",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "bf6fce2f-dd03-533d-be3d-b969d9dff4e7",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "cf57acbf-b168-5fab-8639-a7120fed9a19",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "8d53a058-30c1-5c0c-8677-2db77ee77227",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "6ca08e6a-b030-51a6-9e48-1e709d0e83b6",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "6a34c60c-c324-5ffb-96c0-28bdb2ec38d2",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "7d7d1920-9b57-5d82-800d-92591b235280",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "05a4efe8-b3eb-5ac1-a8df-069670300d0d",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "c0eccbee-f732-5b2b-a752-81b853718048",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "d361e06a-3fdc-50aa-b5d1-ba06478f168b",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "86914911-63bd-5292-9f00-68ca1ebc2d7b",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "522458d9-c8bb-53dd-b133-d8ca26661878",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "56f87a37-a698-5aef-b57f-fea9287ac5cd",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "c1d127cb-a257-5ef4-a79b-ed480be6d8b1",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "e37fda42-c4e2-55f7-9e1b-52e96cd70524",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "bf11fd56-7dfd-5f36-b0a9-bdb1c9e7ddcc",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "2fb3d88a-9d9b-5b2b-b840-30e928798f94",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "edf27303-cc8e-5c70-9929-4022fde4e2c7",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "27a81751-020c-58f5-b074-e31e8912c09f",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "48a024dd-3317-5076-9cdb-469d968a30f8",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "b69bc3ff-2cbf-554c-a070-1b3a8434980f",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "4f891415-a3e0-5cd6-87fe-1d1274e80b2f",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "ee0203a8-c047-58eb-9ea2-e51094b014cc",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "633e8c74-97f6-5c73-925a-234a0fa42671",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "717a4259-0068-5db6-92d3-f6f9c763bd65",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "f8b9411a-5b2b-5649-9d9a-bae6f1ea6f29",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "da3114a4-15bf-5006-ac44-5f99beba88c8",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "fa63eb5d-568b-574d-a901-b37afc59ccff",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "47112d9b-9e10-5d7b-b431-5ed516cd407f",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "947c9582-6268-5e53-b5c0-cb12e3730877",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "2f86c7b2-11ad-5d47-b652-5d8868c1593a",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "0bfb8974-5fdc-566d-a619-f1c4e0dc86cb",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "ee5a956e-a949-51de-b4a6-02a81a23a792",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "8a546b84-7a9a-57fd-be19-e55fc2c7289f",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "e71922b5-1eb0-58ea-bda5-647533bd93fa",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "0e22a3cc-47cb-57a4-a897-47ade94250ae",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "40aad4e9-05ad-5284-ab65-24cb8661b9a8",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "66dd497f-c460-53f9-ba04-a649563f66ff",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "433dbfb4-2f5f-5cbf-a381-3f122e3a2dd9",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "8034d659-5a4f-5f0a-be5b-15e5e2875edd",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "ddb35c60-11c4-5572-b892-aee3d7afdd70",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "175b3bfe-b129-54fa-8c42-00a2d8bfe0f8",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "410bd1f4-801a-58ed-8ba5-457cbeb89899",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "0e54cc12-1874-5fd8-a922-725cd4225411",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "2804b51d-43ab-59e3-902d-f53f00e4cd64",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "171ed74e-6fbb-500d-94ab-d20cda19fd72",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "c162c5bc-d552-5f56-81aa-3a01edffeb00",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "43310b02-dda9-5c7a-b830-7b52270583e9",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "649b5213-e580-5313-a5a3-8cff5e0028d8",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "47943680-9296-5f51-97c4-9e86daf02806",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "8cd0ffeb-c452-543a-bf04-85b0f4f0b6fc",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "881c4139-799b-53be-bdf5-6bb00ca156f1",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "1832357c-86a9-5390-973b-430e62e8ba92",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "49afc6f7-6005-5d22-aa89-a5bcd5da35ad",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "25fb4839-f5f9-531e-9cd8-940d376601c2",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "7e0bddee-9e75-50ac-a3f6-3e1f2ab965fe",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "473e4688-2bb7-5320-aff9-135b05b9a28e",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "3f8cfba6-edd0-52ac-83a3-b8be5d742919",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "cc955161-7204-54d1-a885-acae3816d017",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "5b55174c-47e8-58d1-ad74-5f7cc19d3d91",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "14c595e7-73b1-5fa5-8ba7-879b67ca79da",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "6f8b9c79-007c-5d70-86fd-75e556e76738",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "dc04299d-f678-5611-92d1-70c8d4ad51ab",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "9121cee8-4a09-59ef-b2e6-ffb3c0fe2ea3",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "0c8f46f5-bfbe-5680-a33c-56f9c4bf0aef",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "615abfc9-056c-592c-94f0-840f5183c140",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "b3fe71ee-21df-5c73-9987-712c06738e98",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "c6dc9dd8-50a9-5020-9049-602e6b45f458",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "9cd015bd-be85-56df-a015-cd0de3cea539",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "9f498eb1-0ca0-5ec8-820a-dabcc14ec110",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "eca5df58-4ed2-57b5-a243-1a1a3128b4bc",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "5402a960-d836-5dc6-852b-90d784dae549",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "762bc668-e90f-568d-a090-11f3d81ef372",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "ad9c4920-59dc-5f9b-8f71-ed57b638e824",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "84de9432-132a-59b4-a5fb-8d6f5290bc43",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "a1333311-19e2-511f-9a67-1bc038eb36e2",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "3fb09741-dfa6-5824-bf6d-2abcd3b375ae",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "523109a8-aabe-5a05-9869-9366e8ff87c6",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "20fc8993-07bf-5d71-8102-1c588488fe3b",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "e395ccb6-ae52-5be3-8caf-ec16426a10ba",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "6b228856-8dd5-57fe-a953-0a7cf8b7ffa8",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "85e4ad5c-f5a3-5eab-897d-340999149ca3",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "4a1d5c67-90e8-5bdb-b307-f33b513adc47",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "710c38c2-9dc8-5f6a-abf9-f14f9848915f",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "4d384eff-a9e7-537a-bf37-c06e3f4ca928",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "5670e24f-8177-5564-a577-56c80f19c551",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "3cada13a-d4c1-58bb-a2a1-301da9f4d6c5",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "ddec90c8-4c2b-5498-bce4-7b287a9df859",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "63c6d1c2-1403-5c41-8b64-2ebeed5d3562",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "e36116c9-fd1c-520a-98bf-981e683737cd",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "50ed1fb2-795d-5d5b-8edc-f38aaa081916",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "7a6bf233-70a3-5623-a3fa-d35304a949c6",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "37afbc23-ddac-55fb-b577-1804f43a32b9",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "b7a9a403-d3b4-5e44-9deb-c6ffa322bce6",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "9d9ea979-29fa-56c0-923a-c5d3733e119c",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "8d2d1602-cc29-5364-8db9-37eac3f79eb5",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "3337e434-5505-578e-86e4-0c1e28c84318",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "bbac217b-9694-5849-bb80-a203794d9faa",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "8b3bd261-bf72-5c30-acf0-d77b6c1f3229",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "21b40925-e949-50cf-840c-98ed9b7bbdba",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "4da4655f-054f-57de-927f-9394413ab6be",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "6f6b84b6-7f75-5771-91ef-a212353d630e",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "40d1f365-f5a0-5d18-aae2-e1501a88e240",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "e27b5b8f-4595-5085-91ca-bf659d2d52e7",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "bc561c00-5112-58c0-a8ae-93702f81edf6",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "5240eeb8-bdc6-5fb6-a3c7-19461a6733a1",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "1d7c0efa-b8f7-5fc6-87f5-b9cb290aae0b",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "b34897aa-2c46-532d-9230-8a15fad951ea",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "e49d4f07-61a7-5b80-93a6-f4d50156010d",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "e9fee38c-5580-565f-b153-718f3ee398ea",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "9154492f-d0b3-5274-80e5-8d505f9ad560",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "bb2e162e-07c4-529b-82df-37a1aa6bd2b9",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "164b21ff-fe4a-560b-803e-87ef7036adbf",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "bfda3335-fa44-525e-8633-58f3e89d95d7",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "5a69515c-6ed9-588d-b74e-57a8c5711465",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "1f6cd94b-752f-58a8-aa17-d27e05794c11",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "802dfda6-66e3-55c6-9b6b-f170cb4c3fa5",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "781e2387-f526-5830-8abb-37c6296423da",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "6680669e-5a2a-5060-93ee-c50034516fdc",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "647149a0-00d9-5451-b2cc-bd90516e3189",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "2dfde8e8-6427-50d4-97e6-20db660f17b4",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "888335e4-eebd-576e-a3db-dfc7b23f7e08",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "a8bd265f-39af-555f-acb1-47b56176824c",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "ce46f156-4dee-5e07-acea-ac219814a375",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "1f86cc52-a521-5f51-8c57-c1bf95426098",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "845aea6c-bb48-513a-9b8e-688518de2687",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "e19ea16a-af8e-55ff-b879-6d2d4abc34ad",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "3604a6ef-bb74-5e72-809b-047dceb9a767",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "be27995a-8c30-5d40-a154-b4e3bf3fd761",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "26738565-2a41-5cdd-8ab6-8e2f0109432a",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "7140ea53-f635-592a-8f99-79a91bd77d11",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "393e9b2c-eeab-5d80-b622-6c2f881201e8",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "ea419716-989a-569a-a1f9-c29dad5e1664",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "624c88b7-f843-55ec-9ee1-1e8e9376403d",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "8a1309dd-455a-55e0-b7c6-fe746661740b",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "6353b588-bc19-5dd7-ada1-cf088aeb1b1f",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "128581a5-d5c3-5db5-99c6-35869c1ce0c8",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "59e83610-1343-5f87-811e-b5fefa0ffff6",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "bb71928a-f4d7-5ab9-8c4d-fe91d0562942",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "a4556b70-8bfb-52c9-a7fc-7a44b107efc3",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "41e59deb-26fe-5314-81bc-2e8d728693cc",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "e7fe700b-ef32-558d-9d9a-cbb6b78f05fa",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "7a0ff8d4-06fe-5d38-978d-e4e0465976c0",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "26adefb6-64d3-55c1-965c-474129bfab02",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "ab80b85f-3811-5d52-95c3-08aeb3cb7ca5",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "44e4cbf6-f3bf-5823-8907-076aa358d386",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "e14e354c-5674-5152-85a2-2416baaf2f59",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "306c07f9-2f30-50df-8567-d2f6cfe147d5",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "29615960-b65c-5c03-abdf-8760e5c0fe91",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "d93f2c73-bb91-596d-b277-b38d609e6968",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "f0aa216d-8d94-59ff-8773-0d0797c79582",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "19452337-6391-540c-97fe-5197ba37ba22",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "cb2630c5-491a-5a1e-adca-a62b4f8069eb",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "f4564f9f-f750-53a2-a081-ce826f7eea41",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "e0aefcdb-bb7b-5876-bedd-b48eaf43e251",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "5b532b37-3fed-555e-8a67-cdb8542a0071",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "a2ac9b23-d778-5745-a0ab-81e95e0433f3",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "57eae0f3-3b3b-57f2-8342-5a562d8f837d",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "7e41923d-7841-5642-890f-3edfd8019625",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "e17bf02b-a106-5ec3-b46b-2f2173236e09",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "d1190027-7c89-5b22-8afa-aa65d2a61937",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "9d3d8e96-a500-578a-8f22-72ad9ef6ed1f",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "18650833-b051-50b1-8f08-635a104d7170",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "c7a97342-3a6b-5078-ba16-add79c8b19d9",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "0c511e74-160f-56e5-8c14-4844df4c3466",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "90b99c93-bf8f-5b34-bcb8-416307c054f8",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "7e61a142-e3b8-5e61-8f1c-eaedcb12a3bd",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "36e1325a-bc2f-59dc-8056-d929efa056dd",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "a28eddaa-0aca-51d9-94a7-189604aa89f2",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "80985501-c0c1-500d-b6f0-f99e5f3858c2",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "00278523-4a4e-504d-91fd-f022000fd1b6",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "0b346501-7c33-51a9-875b-65022696410c",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "35c356f1-2781-5c25-b39c-c1b2f803b47b",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "58a693e9-7aa4-51ea-94a5-c6e847ae11c6",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "16b1d056-d251-5bc2-8dd6-5d398b3c3480",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "a9ed2a55-b4a5-59c0-a037-690eda178901",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "4f2b7455-f5c7-51ae-9647-1a3d764a9f8b",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "63b14854-e5fd-5448-bea5-3e80ad5c89d4",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "98c823d1-7e81-5aac-a9d4-4b7145313502",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "b8601a52-e208-50f9-a6cf-39c878e07a98",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "58ada46a-0c64-51fe-a403-bed2a783321a",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "f263f97e-2fbc-5a45-9c84-f4f142018b0f",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "0b80c945-3226-5baf-9edd-098ff62288cd",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "c93a2348-8dfc-586d-912b-a642464da04c",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "d809c9a1-ee3a-5fa1-ad1e-71b7c7b84578",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "37fdeef7-b6a3-5fab-9ed2-b37f8bebf72b",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "050db0ce-e99c-50c0-bc39-0ee2764b2c22",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "5a2c4e46-6a70-5fe4-8998-004e478a5716",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "94af0d13-722e-5090-ba13-072dc60dd7e7",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "679e93e8-8606-50af-b440-30ab810fa9dc",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "2c1ddc0c-bd9e-5626-9f59-368d94a5ab46",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "30767d53-3470-5d10-892a-241a556e1a59",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "45d2b0d8-a880-52ea-b304-356235cfc423",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "25203b32-4600-59b6-a6af-bbe4a7a6f1a8",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "ccdfe7c1-ee40-50f0-8633-b8f57a9db655",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "89a52cfd-201c-5bb9-880e-37f6f86ea2ec",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "52a59a69-03c3-5346-879e-ac7627ec6bab",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "6d887fe4-67cc-54f4-b371-02d116f6136d",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "050bc731-89ee-5493-b283-fc2a9f948266",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "537a0820-14fe-5f4f-96a2-513ddacbad2b",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "00ef4933-a975-513a-98e8-677a390aa814",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "ef5f880e-f0de-55a2-832f-7b61a9c4c89c",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "251a58cd-9ccc-5866-ac08-6a3c275e4122",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "0c696d6d-b167-5a08-92d3-16e5f229a640",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "78878af1-da4b-5793-b195-0746ab88698f",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "c2850073-efa3-511e-90f2-c90c340ab0b0",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "10b55ac3-46f2-5fb3-ad31-9b11f4ead227",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "23f7f7ba-c693-5697-a2dc-6473d02523f4",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "353ac282-6efe-59c4-8104-0789d619a46f",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "73119adb-0de6-53d8-8fbe-2383696a8b38",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "42f221d2-ae50-54c6-8bf4-116ac2f09311",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "4a488686-875c-532b-bc7a-634c39b4e969",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "2e6a5b94-5bb2-5076-b3ee-9592643ebc4b",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "2fa96eb1-598c-51b0-8c86-cea2e3ca99a5",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "12070f2a-60d3-5c13-b0eb-f32f2a4f9ef8",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "ae3d1db1-32eb-5864-8cb0-80a7863ccd0d",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "7a06d49e-6d07-50c4-a30a-754ba9e58f2d",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "8df42d99-0a07-5824-91ae-4bd74aae7f54",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "1bcbabe5-24de-5a4a-a282-a8d2ca20504c",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "9d3e1148-f4e4-5477-8e43-ed6fdc9d5b44",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "16b0c993-4493-50d0-8e69-8437078ea790",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "c4223828-8cf6-57a9-bfa6-e039dad9e66c",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "450be714-1171-5f42-b7d2-71a0d5d43886",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "f7a08d62-dd90-5753-bcb3-dfa49a340f37",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "fab042d1-3205-57e2-9470-5d98e013173a",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "7bb875cf-5afd-5d6d-9748-49d5e8fa0521",
+        "reason": "no valid pixels in the analysis region"
+      },
+      {
+        "item_id": "76c80f93-b570-5708-8260-4583b50a76cd",
+        "reason": "no valid pixels in the analysis region"
+      }
+    ]
+  },
+  "highlighted_observation": {
+    "observed_at": "2025-02-24T09:56:11Z",
+    "value": 1944.07,
+    "baseline": 1924.39,
+    "difference_percent": 1.02,
+    "z_score": 2.11
+  },
+  "observations": [
+    {
+      "observed_at": "2025-01-02T09:46:00Z",
+      "value": 1925.2,
+      "unit": "ppb",
+      "valid_pixels": 64,
+      "pixel_min": 1915.07,
+      "pixel_max": 1933.18,
+      "stac_item_id": "a007a9fd-3398-54f1-abcd-cd5117b561cf",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2025/01/S5p_TROPO_L2_CH4_20250102_NT_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC a007a9fd-3398-54f1-abcd-cd5117b561cf"
+    },
+    {
+      "observed_at": "2025-01-06T10:11:33Z",
+      "value": 1931.44,
+      "unit": "ppb",
+      "valid_pixels": 4,
+      "pixel_min": 1931.44,
+      "pixel_max": 1931.44,
+      "stac_item_id": "224ebc0a-7970-5105-8562-f26d82fac13d",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2025/01/S5p_TROPO_L2_CH4_20250106_NT_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC 224ebc0a-7970-5105-8562-f26d82fac13d"
+    },
+    {
+      "observed_at": "2025-01-07T09:52:34Z",
+      "value": 1929.32,
+      "unit": "ppb",
+      "valid_pixels": 45,
+      "pixel_min": 1917.8,
+      "pixel_max": 1942.7,
+      "stac_item_id": "018d9e53-1f43-5606-912f-7065aa97b76f",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2025/01/S5p_TROPO_L2_CH4_20250107_NT_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC 018d9e53-1f43-5606-912f-7065aa97b76f"
+    },
+    {
+      "observed_at": "2025-01-17T10:05:47Z",
+      "value": 1931.3,
+      "unit": "ppb",
+      "valid_pixels": 31,
+      "pixel_min": 1931.3,
+      "pixel_max": 1931.3,
+      "stac_item_id": "c33ceacb-171e-5e67-8923-c6904beeb9a1",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2025/01/S5p_TROPO_L2_CH4_20250117_NT_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC c33ceacb-171e-5e67-8923-c6904beeb9a1"
+    },
+    {
+      "observed_at": "2025-01-18T09:46:49Z",
+      "value": 1906.59,
+      "unit": "ppb",
+      "valid_pixels": 28,
+      "pixel_min": 1906.59,
+      "pixel_max": 1906.59,
+      "stac_item_id": "58f963a1-4e76-56c5-bbf4-e65f46b23a6a",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2025/01/S5p_TROPO_L2_CH4_20250118_NT_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC 58f963a1-4e76-56c5-bbf4-e65f46b23a6a"
+    },
+    {
+      "observed_at": "2025-02-17T10:27:15Z",
+      "value": 1927.71,
+      "unit": "ppb",
+      "valid_pixels": 64,
+      "pixel_min": 1923.09,
+      "pixel_max": 1931.08,
+      "stac_item_id": "3cdb302f-e8c6-511c-94d3-e328d8c8e94b",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2025/02/S5p_TROPO_L2_CH4_20250217_NT_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC 3cdb302f-e8c6-511c-94d3-e328d8c8e94b"
+    },
+    {
+      "observed_at": "2025-02-18T10:08:19Z",
+      "value": 1933.55,
+      "unit": "ppb",
+      "valid_pixels": 42,
+      "pixel_min": 1933.35,
+      "pixel_max": 1933.77,
+      "stac_item_id": "da11aa75-769b-5a49-8fd7-62ace4d9ff7e",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2025/02/S5p_TROPO_L2_CH4_20250218_NT_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC da11aa75-769b-5a49-8fd7-62ace4d9ff7e"
+    },
+    {
+      "observed_at": "2025-02-19T09:49:22Z",
+      "value": 1924.8,
+      "unit": "ppb",
+      "valid_pixels": 58,
+      "pixel_min": 1922.24,
+      "pixel_max": 1929.31,
+      "stac_item_id": "3eaaaa77-3985-528e-8d16-1d51d63b9abf",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2025/02/S5p_TROPO_L2_CH4_20250219_NT_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC 3eaaaa77-3985-528e-8d16-1d51d63b9abf"
+    },
+    {
+      "observed_at": "2025-02-22T10:34:03Z",
+      "value": 1927.71,
+      "unit": "ppb",
+      "valid_pixels": 64,
+      "pixel_min": 1924.52,
+      "pixel_max": 1930.04,
+      "stac_item_id": "268d63c1-af30-5a37-a98e-38f0dd395f9a",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2025/02/S5p_TROPO_L2_CH4_20250222_NT_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC 268d63c1-af30-5a37-a98e-38f0dd395f9a"
+    },
+    {
+      "observed_at": "2025-02-23T10:15:07Z",
+      "value": 1906.26,
+      "unit": "ppb",
+      "valid_pixels": 64,
+      "pixel_min": 1900.45,
+      "pixel_max": 1913.9,
+      "stac_item_id": "3af703dd-d9ba-58f9-8aa1-6cb254323a24",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2025/02/S5p_TROPO_L2_CH4_20250223_NT_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC 3af703dd-d9ba-58f9-8aa1-6cb254323a24"
+    },
+    {
+      "observed_at": "2025-02-24T09:56:11Z",
+      "value": 1944.07,
+      "unit": "ppb",
+      "valid_pixels": 35,
+      "pixel_min": 1942.07,
+      "pixel_max": 1945.96,
+      "stac_item_id": "5c910eca-74b1-5169-a76f-96823516c923",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2025/02/S5p_TROPO_L2_CH4_20250224_NT_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC 5c910eca-74b1-5169-a76f-96823516c923"
+    },
+    {
+      "observed_at": "2025-02-28T10:21:56Z",
+      "value": 1927.62,
+      "unit": "ppb",
+      "valid_pixels": 64,
+      "pixel_min": 1913.91,
+      "pixel_max": 1933.99,
+      "stac_item_id": "80797821-215b-538d-83dc-4943067486ae",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2025/02/S5p_TROPO_L2_CH4_20250228_NT_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC 80797821-215b-538d-83dc-4943067486ae"
+    },
+    {
+      "observed_at": "2025-03-15T10:42:29Z",
+      "value": 1867.5,
+      "unit": "ppb",
+      "valid_pixels": 2,
+      "pixel_min": 1867.5,
+      "pixel_max": 1867.5,
+      "stac_item_id": "ed31637b-5de2-56fe-b481-98d8f5ad7b71",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2025/03/S5p_TROPO_L2_CH4_20250315_NT_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC ed31637b-5de2-56fe-b481-98d8f5ad7b71"
+    },
+    {
+      "observed_at": "2025-04-17T10:27:53Z",
+      "value": 1896.56,
+      "unit": "ppb",
+      "valid_pixels": 19,
+      "pixel_min": 1895.79,
+      "pixel_max": 1897.61,
+      "stac_item_id": "9ed4e304-32be-575d-a8c0-7739af36abe2",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2025/04/S5p_TROPO_L2_CH4_20250417_NT_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC 9ed4e304-32be-575d-a8c0-7739af36abe2"
+    },
+    {
+      "observed_at": "2025-06-10T10:20:20Z",
+      "value": 1911.57,
+      "unit": "ppb",
+      "valid_pixels": 57,
+      "pixel_min": 1907.92,
+      "pixel_max": 1916.58,
+      "stac_item_id": "d88a9ca4-f662-506a-9ca0-f1268227eb59",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2025/06/S5p_TROPO_L2_CH4_20250610_NT_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC d88a9ca4-f662-506a-9ca0-f1268227eb59"
+    },
+    {
+      "observed_at": "2025-08-30T09:58:26Z",
+      "value": 1909.78,
+      "unit": "ppb",
+      "valid_pixels": 41,
+      "pixel_min": 1900.52,
+      "pixel_max": 1913.46,
+      "stac_item_id": "39399069-273a-5d88-9adf-1f77a31139cb",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2025/08/S5p_TROPO_L2_CH4_20250830_NT_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC 39399069-273a-5d88-9adf-1f77a31139cb"
+    },
+    {
+      "observed_at": "2025-12-02T10:28:42Z",
+      "value": 1918.69,
+      "unit": "ppb",
+      "valid_pixels": 63,
+      "pixel_min": 1906.44,
+      "pixel_max": 1919.37,
+      "stac_item_id": "29e2c72c-7d20-5d16-a0cd-02fd48deb56e",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2025/12/S5p_TROPO_L2_CH4_20251202_NR_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC 29e2c72c-7d20-5d16-a0cd-02fd48deb56e"
+    },
+    {
+      "observed_at": "2026-01-03T10:29:24Z",
+      "value": 1925.45,
+      "unit": "ppb",
+      "valid_pixels": 18,
+      "pixel_min": 1913.03,
+      "pixel_max": 1930.23,
+      "stac_item_id": "a7a641a0-d53a-5a71-b6f7-fff37a57d80a",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2026/01/S5p_TROPO_L2_CH4_20260103_NR_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC a7a641a0-d53a-5a71-b6f7-fff37a57d80a"
+    },
+    {
+      "observed_at": "2026-01-05T09:51:26Z",
+      "value": 1938.48,
+      "unit": "ppb",
+      "valid_pixels": 1,
+      "pixel_min": 1938.48,
+      "pixel_max": 1938.48,
+      "stac_item_id": "2b64f409-ba77-565b-8f9f-b1a4cf5cf9ad",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2026/01/S5p_TROPO_L2_CH4_20260105_NR_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC 2b64f409-ba77-565b-8f9f-b1a4cf5cf9ad"
+    },
+    {
+      "observed_at": "2026-01-06T09:32:27Z",
+      "value": 1930.66,
+      "unit": "ppb",
+      "valid_pixels": 62,
+      "pixel_min": 1929.56,
+      "pixel_max": 1932.97,
+      "stac_item_id": "8969f436-7c0c-5ead-bde7-0fcb741459c6",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2026/01/S5p_TROPO_L2_CH4_20260106_NR_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC 8969f436-7c0c-5ead-bde7-0fcb741459c6"
+    },
+    {
+      "observed_at": "2026-01-09T10:17:02Z",
+      "value": 1940.28,
+      "unit": "ppb",
+      "valid_pixels": 64,
+      "pixel_min": 1929.67,
+      "pixel_max": 1943.47,
+      "stac_item_id": "71d54ade-4c21-54b8-b4f2-765ab92fd1fa",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2026/01/S5p_TROPO_L2_CH4_20260109_NR_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC 71d54ade-4c21-54b8-b4f2-765ab92fd1fa"
+    },
+    {
+      "observed_at": "2026-01-14T10:23:42Z",
+      "value": 1942.17,
+      "unit": "ppb",
+      "valid_pixels": 64,
+      "pixel_min": 1931.01,
+      "pixel_max": 1948.21,
+      "stac_item_id": "bfea3d74-2c4b-5d4a-8a1c-267a878725d3",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2026/01/S5p_TROPO_L2_CH4_20260114_NR_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC bfea3d74-2c4b-5d4a-8a1c-267a878725d3"
+    },
+    {
+      "observed_at": "2026-01-20T10:11:28Z",
+      "value": 1924.69,
+      "unit": "ppb",
+      "valid_pixels": 5,
+      "pixel_min": 1924.69,
+      "pixel_max": 1924.69,
+      "stac_item_id": "e98ce19f-f550-54c3-804b-a2ad5a56671e",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2026/01/S5p_TROPO_L2_CH4_20260120_NR_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC e98ce19f-f550-54c3-804b-a2ad5a56671e"
+    },
+    {
+      "observed_at": "2026-01-25T10:18:13Z",
+      "value": 1926.29,
+      "unit": "ppb",
+      "valid_pixels": 59,
+      "pixel_min": 1925.18,
+      "pixel_max": 1927.3,
+      "stac_item_id": "54c6705a-12f6-55f5-bd19-4a5f6e4e7454",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2026/01/S5p_TROPO_L2_CH4_20260125_NR_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC 54c6705a-12f6-55f5-bd19-4a5f6e4e7454"
+    },
+    {
+      "observed_at": "2026-01-30T10:25:01Z",
+      "value": 1934.41,
+      "unit": "ppb",
+      "valid_pixels": 62,
+      "pixel_min": 1929.31,
+      "pixel_max": 1936.1,
+      "stac_item_id": "940b499f-ddca-54b2-acef-e30fabd5cd9b",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2026/01/S5p_TROPO_L2_CH4_20260130_NR_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC 940b499f-ddca-54b2-acef-e30fabd5cd9b"
+    },
+    {
+      "observed_at": "2026-02-04T10:31:50Z",
+      "value": 1939.77,
+      "unit": "ppb",
+      "valid_pixels": 64,
+      "pixel_min": 1920.66,
+      "pixel_max": 1943.26,
+      "stac_item_id": "e430fc22-a753-5f47-a27d-ec37e54bd99b",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2026/02/S5p_TROPO_L2_CH4_20260204_NR_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC e430fc22-a753-5f47-a27d-ec37e54bd99b"
+    },
+    {
+      "observed_at": "2026-02-10T10:19:45Z",
+      "value": 1942.25,
+      "unit": "ppb",
+      "valid_pixels": 56,
+      "pixel_min": 1938.98,
+      "pixel_max": 1943.8,
+      "stac_item_id": "25ff06a5-36ea-5fe5-9c91-3b6c961732e0",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2026/02/S5p_TROPO_L2_CH4_20260210_NR_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC 25ff06a5-36ea-5fe5-9c91-3b6c961732e0"
+    },
+    {
+      "observed_at": "2026-08-26T10:39:06Z",
+      "value": 1943.56,
+      "unit": "ppb",
+      "valid_pixels": 64,
+      "pixel_min": 1928.17,
+      "pixel_max": 1944.4,
+      "stac_item_id": "773da320-13d5-5fba-b93b-2b8b7293bdcb",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2026/08/S5p_TROPO_L2_CH4_20260826_NT_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC 773da320-13d5-5fba-b93b-2b8b7293bdcb"
+    },
+    {
+      "observed_at": "2026-08-28T10:00:53Z",
+      "value": 1927.36,
+      "unit": "ppb",
+      "valid_pixels": 28,
+      "pixel_min": 1924.26,
+      "pixel_max": 1927.73,
+      "stac_item_id": "ece92b07-ff78-5706-a4ee-314f0a5d243f",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2026/08/S5p_TROPO_L2_CH4_20260828_NT_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC ece92b07-ff78-5706-a4ee-314f0a5d243f"
+    },
+    {
+      "observed_at": "2026-09-06T10:31:50Z",
+      "value": 1905.57,
+      "unit": "ppb",
+      "valid_pixels": 59,
+      "pixel_min": 1904.22,
+      "pixel_max": 1907.54,
+      "stac_item_id": "8b2a392d-fa49-577e-a85d-593058f3bdee",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2026/09/S5p_TROPO_L2_CH4_20260906_NT_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC 8b2a392d-fa49-577e-a85d-593058f3bdee"
+    },
+    {
+      "observed_at": "2026-09-07T10:12:43Z",
+      "value": 1898.05,
+      "unit": "ppb",
+      "valid_pixels": 4,
+      "pixel_min": 1898.05,
+      "pixel_max": 1898.05,
+      "stac_item_id": "c2537893-aeff-54f9-9c5c-40db1194ccb2",
+      "asset_url": "https://deafrica-sentinel-5p-ch4.s3.af-south-1.amazonaws.com/Sentinel-5p/TROPOMI/TROPO_L2_CH4/2026/09/S5p_TROPO_L2_CH4_20260907_NT_37MBU_0_0/CH4.tif",
+      "source": "Digital Earth Africa Sentinel-5P/TROPOMI \u00b7 STAC c2537893-aeff-54f9-9c5c-40db1194ccb2"
+    }
+  ],
+  "sha256": "b3a1729e662117c6f1100e34a809e0e85b36c9a1e06441a4ac6cba2f97d33b67"
+}

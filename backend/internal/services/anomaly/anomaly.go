@@ -2,20 +2,21 @@ package anomaly
 
 import "math"
 
+const MinBaselineObservations = 10
+
 type Result struct {
 	Baseline, DeviationPercent, ZScore float64
 	Severity                           string
 }
 
 func Classify(z float64) string {
-	a := math.Abs(z)
-	if a >= 3 {
+	if z >= 3 {
 		return "severe"
 	}
-	if a >= 2 {
+	if z >= 2 {
 		return "high"
 	}
-	if a >= 1 {
+	if z >= 1 {
 		return "elevated"
 	}
 	return "normal"
@@ -30,6 +31,13 @@ func Score(current float64, previous []float64) Result {
 		mean += v
 	}
 	mean /= float64(len(previous))
+	deviationPercent := 0.0
+	if mean != 0 {
+		deviationPercent = (current - mean) / mean * 100
+	}
+	if len(previous) < MinBaselineObservations {
+		return Result{Baseline: mean, DeviationPercent: deviationPercent, Severity: "normal"}
+	}
 	variance := 0.0
 	for _, v := range previous {
 		variance += (v - mean) * (v - mean)
@@ -40,5 +48,5 @@ func Score(current float64, previous []float64) Result {
 	if sd > 0 {
 		z = (current - mean) / sd
 	}
-	return Result{Baseline: mean, DeviationPercent: (current - mean) / mean * 100, ZScore: z, Severity: Classify(z)}
+	return Result{Baseline: mean, DeviationPercent: deviationPercent, ZScore: z, Severity: Classify(z)}
 }

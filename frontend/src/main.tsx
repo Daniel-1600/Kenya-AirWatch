@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import caseStudyJson from '../../data/dandora_case_study.json';
 import 'leaflet/dist/leaflet.css';
 import './styles.css';
 
@@ -9,6 +10,19 @@ type Anomaly = { id: number; observation_id: number; observed_at: string; value:
 type Site = { id: number; name: string; latitude: number; longitude: number; radius_km: number };
 type Summary = { baseline: number; difference_percent: number; status: string };
 type InvestigationDraft = { status: string; notes: string };
+type CaseStudyObservation = { observed_at: string; value: number; unit: string; valid_pixels: number; pixel_min: number; pixel_max: number; stac_item_id: string; asset_url: string; source: string };
+type CaseStudyData = {
+  title: string;
+  generated_at: string;
+  sha256: string;
+  site: Omit<Site, 'id'>;
+  period: { from: string; to: string };
+  retrieval: { matched_items: number; valid_observations: number };
+  highlighted_observation: { observed_at: string; value: number; baseline: number; difference_percent: number; z_score: number };
+  observations: CaseStudyObservation[];
+};
+
+const CASE_STUDY = caseStudyJson as CaseStudyData;
 
 const API = (import.meta.env.VITE_API_URL || '/api').replace(/\/$/, '');
 const fmt = (date: string) => new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'short' }).format(new Date(date));
@@ -48,6 +62,22 @@ function MapCard({ site }: { site: Site }) {
   </div>;
 }
 
+function CaseStudyCard({ onOpen }: { onOpen: () => void }) {
+  const highlight = CASE_STUDY.highlighted_observation;
+  const coverage = CASE_STUDY.retrieval.valid_observations / CASE_STUDY.retrieval.matched_items * 100;
+  const chart = CASE_STUDY.observations.map(item => ({ date: fmt(item.observed_at), value: item.value }));
+  return <section className="case-study-card">
+    <div className="case-study-copy">
+      <div className="case-study-label"><span className="eyebrow">VERIFIED CASE STUDY</span><span className="verified-pill"><i /> AUTHENTIC SATELLITE DATA</span></div>
+      <h3>What did 563 Sentinel-5P scenes actually reveal at Dandora?</h3>
+      <p>Only {CASE_STUDY.retrieval.valid_observations} scenes contained valid methane pixels inside the 4.5 km region. The strongest high-side signal occurred on {fullDate(highlight.observed_at)}.</p>
+      <div className="case-study-metrics"><span><small>OBSERVATION</small><strong>{highlight.value.toFixed(1)} ppb</strong></span><span><small>ABOVE BASELINE</small><strong>+{highlight.difference_percent.toFixed(1)}%</strong></span><span><small>Z-SCORE</small><strong>{highlight.z_score.toFixed(2)}</strong></span><span><small>VALID COVERAGE</small><strong>{coverage.toFixed(1)}%</strong></span></div>
+      <button className="case-study-button" onClick={onOpen}>Explore the evidence trail →</button>
+    </div>
+    <div className="case-study-chart"><div><span className="eyebrow">VALID REGIONAL OBSERVATIONS</span><strong>{CASE_STUDY.period.from.slice(0, 4)}–{CASE_STUDY.period.to.slice(0, 4)}</strong></div><ResponsiveContainer width="100%" height={155}><AreaChart data={chart} margin={{ top: 15, right: 3, left: -24, bottom: 0 }}><XAxis dataKey="date" tickLine={false} axisLine={false} tick={{ fill: '#829087', fontSize: 9 }} interval="preserveStartEnd" /><YAxis domain={['dataMin - 10', 'dataMax + 10']} tickLine={false} axisLine={false} tick={{ fill: '#829087', fontSize: 9 }} /><Tooltip formatter={(value: any) => [`${Number(value).toFixed(1)} ppb`, 'Methane']} /><Area type="monotone" dataKey="value" stroke="#c6e86b" strokeWidth={2} fill="#c6e86b22" dot={{ r: 2, fill: '#c6e86b', strokeWidth: 0 }} /></AreaChart></ResponsiveContainer><small>Missing dates represent scenes without valid pixels in the analysis region.</small></div>
+  </section>;
+}
+
 function App() {
   const [sites, setSites] = useState<Site[]>([]);
   const [siteId, setSiteId] = useState(1);
@@ -58,6 +88,7 @@ function App() {
   const [range, setRange] = useState(90);
   const [selected, setSelected] = useState<Anomaly | null>(null);
   const [drafts, setDrafts] = useState<Record<number, InvestigationDraft>>({});
+  const [caseStudyOpen, setCaseStudyOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
@@ -130,6 +161,19 @@ function App() {
     link.remove();
     window.setTimeout(() => URL.revokeObjectURL(url), 0);
   };
+  const downloadCaseStudy = () => {
+    const url = URL.createObjectURL(new Blob([JSON.stringify(CASE_STUDY, null, 2)], { type: 'application/json' }));
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'dandora-methane-case-study.json';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    window.setTimeout(() => URL.revokeObjectURL(url), 0);
+  };
+  const caseHighlight = CASE_STUDY.highlighted_observation;
+  const caseSource = CASE_STUDY.observations.find(item => item.observed_at === caseHighlight.observed_at)!;
+  const caseCoverage = CASE_STUDY.retrieval.valid_observations / CASE_STUDY.retrieval.matched_items * 100;
 
   return <main>
     <header>
@@ -146,6 +190,7 @@ function App() {
       <div className="stat"><span className="eyebrow">LAST OBSERVATION</span><strong>{latest ? fmt(latest.observed_at) : '—'}</strong><small>{latest ? `${new Date(latest.observed_at).getFullYear()} · satellite overpass` : 'No observation available'}</small></div>
     </section>
     <section className="grid"><div><div className="section-head"><div><span className="eyebrow">GEOGRAPHIC VIEW</span><h3>Analysis region</h3></div><span className="pill">CH₄ · ppb</span></div><MapCard site={site} /></div><div><div className="section-head"><div><span className="eyebrow">HISTORICAL SIGNAL</span><h3>Methane over time</h3></div><div className="range">{[30, 60, 90].map(days => <button className={range === days ? 'active' : ''} onClick={() => setRange(days)} key={days}>{days}D</button>)}</div></div><div className="chart-card"><div className="chart-kpi"><strong>{shown.length}</strong><span>valid observations<br />in the last {range} days of data</span></div>{chart.length ? <ResponsiveContainer width="100%" height={250}><AreaChart data={chart} margin={{ top: 10, right: 4, left: -20, bottom: 0 }}><defs><linearGradient id="fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#c6e86b" stopOpacity={.34} /><stop offset="100%" stopColor="#c6e86b" stopOpacity={0} /></linearGradient></defs><XAxis dataKey="date" tickLine={false} axisLine={false} tick={{ fill: '#738078', fontSize: 11 }} interval="preserveStartEnd" /><YAxis domain={['dataMin - 20', 'dataMax + 20']} tickLine={false} axisLine={false} tick={{ fill: '#738078', fontSize: 11 }} /><Tooltip contentStyle={{ background: '#13241f', border: 'none', borderRadius: 10, color: '#fff' }} formatter={(value: any) => [`${Number(value).toFixed(1)} ppb`, 'Methane']} /><Area type="monotone" dataKey="value" stroke="#b7df58" strokeWidth={2.5} fill="url(#fill)" connectNulls dot={{ r: 2, fill: '#b7df58', strokeWidth: 0 }} /></AreaChart></ResponsiveContainer> : <div className="empty-state">No valid methane observations are available for this period.</div>}<div className="chart-foot"><span><i className="line" /> methane observations</span><span>Source: {latest?.source || 'not available'}</span></div></div></div></section>
+    <CaseStudyCard onOpen={() => setCaseStudyOpen(true)} />
     <section className="alerts"><div className="section-head"><div><span className="eyebrow">AUTOMATED REVIEW</span><h3>Environmental alerts <span>{shownAlerts.length}</span></h3></div><small className="method">Select an alert to review evidence and plan a response</small></div><div className="alert-list">{shownAlerts.length ? shownAlerts.slice(0, 4).map(item => <button className="alert" key={item.id} onClick={() => setSelected(item)}><div className="alert-date"><strong>{fmt(item.observed_at)}</strong><small>{new Date(item.observed_at).getFullYear()}</small></div><span className={`severity ${item.severity}`}>{item.severity}</span><div className="alert-value"><strong>{item.value.toFixed(1)} <small>ppb</small></strong><span>baseline {item.baseline.toFixed(1)} · {item.deviation_percent >= 0 ? '+' : ''}{item.deviation_percent.toFixed(1)}%</span></div><span className="arrow">Review →</span></button>) : <div className="empty-alerts">No statistical alerts were detected in the selected period.</div>}</div></section>
     {selected && selectedDraft && <div className="modal-backdrop investigation-backdrop" onClick={() => setSelected(null)}><div className="modal investigation" role="dialog" aria-modal="true" aria-label="Investigation brief" onClick={event => event.stopPropagation()}>
       <button onClick={() => setSelected(null)} className="close" aria-label="Close investigation">×</button>
@@ -156,6 +201,16 @@ function App() {
       <section className="investigation-section"><span className="eyebrow">2 · INTERPRETATION</span><div className="interpret-grid"><div><strong>What the alert means</strong><p>This regional methane observation is statistically unusual compared with the available historical observations.</p></div><div className="boundary"><strong>What it cannot establish</strong><p>It cannot identify a point source, attribute the signal to {site.name}, or replace ground-level measurements.</p></div></div></section>
       <section className="investigation-section"><span className="eyebrow">3 · FOLLOW-UP</span><ul className="verification-list"><li>Compare the overpass with a nearby reference region.</li><li>Review weather, wind, cloud cover, and quality context.</li><li>Seek ground measurements or local observations before escalation.</li></ul><div className="investigation-form"><label>Review status<select value={selectedDraft.status} onChange={event => updateDraft({ status: event.target.value })}><option>Needs review</option><option>Reference comparison requested</option><option>Ground check requested</option><option>Reviewed — no action</option></select></label><label>Investigator notes<textarea rows={3} value={selectedDraft.notes} onChange={event => updateDraft({ notes: event.target.value })} placeholder="Record local reports, weather context, contacts, or the next action…" /></label></div></section>
       <div className="modal-actions"><small>Exports the evidence, limitations, follow-up checklist, status, and your notes.</small><button className="export-button" onClick={exportBrief}>Export investigation brief ↓</button></div>
+    </div></div>}
+    {caseStudyOpen && <div className="modal-backdrop investigation-backdrop" onClick={() => setCaseStudyOpen(false)}><div className="modal investigation case-study-modal" role="dialog" aria-modal="true" aria-label="Verified Dandora case study" onClick={event => event.stopPropagation()}>
+      <button onClick={() => setCaseStudyOpen(false)} className="close" aria-label="Close case study">×</button>
+      <div className="investigation-head"><div><span className="eyebrow">VERIFIED CASE STUDY · DIGITAL EARTH AFRICA</span><h3>Dandora methane signal on {fullDate(caseHighlight.observed_at)}</h3><p>Authentic Sentinel-5P/TROPOMI observation · 4.5 km analysis region</p></div><span className="severity high">high</span></div>
+      <div className="authentic-banner"><strong>Reproducible public evidence</strong><span>Every value below is derived from a public Cloud Optimized GeoTIFF and linked to its STAC identifier.</span></div>
+      <section className="investigation-section"><span className="eyebrow">THE SIGNAL</span><div className="modal-grid"><div><small>METHANE</small><strong>{caseHighlight.value.toFixed(2)} ppb</strong></div><div><small>BASELINE</small><strong>{caseHighlight.baseline.toFixed(2)} ppb</strong></div><div><small>DEVIATION</small><strong>+{caseHighlight.difference_percent.toFixed(2)}%</strong></div><div><small>Z-SCORE</small><strong>{caseHighlight.z_score.toFixed(2)}</strong></div></div><p>This was the strongest high-side statistical signal after the baseline contained at least ten earlier valid regional observations. It is a prompt for follow-up, not evidence of a source.</p></section>
+      <section className="investigation-section"><span className="eyebrow">THE COVERAGE REALITY</span><div className="coverage-story"><strong>{CASE_STUDY.retrieval.valid_observations} of {CASE_STUDY.retrieval.matched_items} scenes</strong><span>contained valid methane pixels in the analysis circle ({caseCoverage.toFixed(1)}% coverage). Cloud and retrieval gaps make this a screening tool rather than continuous monitoring.</span></div><div className="case-pixel-note"><span><small>VALID PIXELS THAT DAY</small>{caseSource.valid_pixels}</span><span><small>REGIONAL PIXEL RANGE</small>{caseSource.pixel_min.toFixed(2)}–{caseSource.pixel_max.toFixed(2)} ppb</span></div></section>
+      <section className="investigation-section"><span className="eyebrow">PROVENANCE</span><div className="provenance case-provenance"><span><small>COLLECTION</small>Digital Earth Africa Sentinel-5P TROPOMI Level-2 CH₄</span><span><small>STAC ITEM</small>{caseSource.stac_item_id}</span><span><small>DATASET FINGERPRINT</small>{CASE_STUDY.sha256}</span><span><small>GENERATED</small>{new Date(CASE_STUDY.generated_at).toLocaleString('en-GB')}</span></div></section>
+      <div className="interpret-grid case-boundary"><div><strong>What this demonstrates</strong><p>Public satellite data can flag an unusual regional methane observation for evidence-based review.</p></div><div className="boundary"><strong>What it does not prove</strong><p>The observation cannot attribute methane to Dandora Dumpsite or replace field measurements.</p></div></div>
+      <div className="modal-actions case-actions"><small>Download the complete observation series and provenance, or inspect the exact source raster.</small><div><button className="secondary-button" onClick={downloadCaseStudy}>Download evidence JSON</button><a className="export-button" href={caseSource.asset_url} target="_blank" rel="noreferrer">Open source raster ↗</a></div></div>
     </div></div>}
   </main>;
 }

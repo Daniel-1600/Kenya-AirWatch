@@ -74,9 +74,19 @@ The frontend uses `/api` by default and Vite proxies it to `http://localhost:808
 
 ## Methodology
 
-For each valid observation, the anomaly service compares the value with previous valid observations. It calculates a rolling mean, population standard deviation and z-score. `|z| < 1` is normal, `1–2` elevated, `2–3` high, and `>= 3` severe. The first observations are treated as baseline-building records when there are not enough previous values.
+For each valid observation, the anomaly service compares the value with previous valid observations. It calculates a historical mean, population standard deviation and z-score after at least ten earlier valid observations establish a baseline. High-side values with `z < 1` are normal, `1–2` elevated, `2–3` high, and `>= 3` severe. Low-side outliers remain visible in the series but do not trigger methane-risk alerts.
 
-The dashboard's map is a geographic context map with an analysis-radius ring and processed observation signal points. It is labeled as a visualization based on processed satellite observations; it is not fabricated satellite imagery.
+The dashboard's map shows the monitoring-site coordinate and analysis-radius ring. It does not invent point-level methane locations or present a basemap as satellite measurement imagery.
+
+## Reproducible case study
+
+The dashboard includes an authentic Dandora case study built from the public Digital Earth Africa Sentinel-5P/TROPOMI Level-2 methane collection. The committed evidence contains every valid regional observation, its source STAC identifier and raster URL, the coverage calculation, and a stable scientific-data fingerprint. Read [the case-study methodology and findings](docs/CASE_STUDY.md), or regenerate it with:
+
+```bash
+UV_CACHE_DIR=/tmp/dandora-uv-cache uv run --with rasterio python scripts/build_case_study.py
+```
+
+The case study is kept separate from fixture-mode operational data and is visibly labeled as authentic satellite evidence in the interface.
 
 ## Limitations
 
