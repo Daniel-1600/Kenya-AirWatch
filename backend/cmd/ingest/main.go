@@ -59,6 +59,8 @@ func main() {
 				if err := repo.UpsertAnomaly(ctx, inserted, score.Baseline, score.DeviationPercent, score.ZScore, score.Severity); err != nil {
 					panic(err)
 				}
+			} else if err := repo.DeleteAnomaly(ctx, inserted.ID); err != nil {
+				panic(err)
 			}
 			fmt.Printf("[%s] %s %.1f %s baseline=%.1f z=%.2f\n", site.Name, o.ObservedAt.Format("2006-01-02"), o.Value, score.Severity, score.Baseline, score.ZScore)
 		}

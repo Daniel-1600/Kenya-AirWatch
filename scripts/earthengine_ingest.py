@@ -8,8 +8,7 @@ region = ee.Geometry.Point([lon, lat]).buffer(float(os.environ["EE_RADIUS_KM"]) 
 band = "CH4_column_volume_mixing_ratio_dry_air"
 collection = (ee.ImageCollection("COPERNICUS/S5P/OFFL/L3_CH4")
     .filterDate(os.environ["EE_FROM"], os.environ["EE_TO"])
-    .filterBounds(region)
-    .filter(ee.Filter.gte("qa_value", 0.5)))
+    .filterBounds(region))
 
 def extract(image):
     value = image.select(band).reduceRegion(
@@ -19,5 +18,7 @@ def extract(image):
 
 features = collection.map(extract).filter(ee.Filter.notNull(["value"])).getInfo()["features"]
 print(json.dumps([{"observed_at": f["properties"]["date"],
-    "value": f["properties"]["value"] * 1e9, "unit": "ppb",
+    # Earth Engine publishes this band as a column-averaged dry-air mixing
+    # ratio in ppb; no mol-fraction conversion is required.
+    "value": f["properties"]["value"], "unit": "ppb",
     "source": "Sentinel-5P/TROPOMI via Google Earth Engine"} for f in features]))

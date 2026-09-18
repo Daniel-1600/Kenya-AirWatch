@@ -59,7 +59,9 @@ earthengine authenticate
 cd backend && SATELLITE_MODE=earthengine go run ./cmd/ingest
 ```
 
-The adapter is intentionally isolated in `backend/internal/services/satellite`. It invokes `scripts/earthengine_ingest.py`, which requests Sentinel-5P methane imagery, filters to the Dandora analysis region/date window, applies `qa_value >= 0.5`, removes null values, and normalizes processed daily values. No raster files are stored in PostgreSQL. If Earth Engine credentials/network are unavailable, ingestion exits with a clear error; only `fixture` mode is used for the demo.
+The adapter is intentionally isolated in `backend/internal/services/satellite`. It invokes `scripts/earthengine_ingest.py`, which requests Sentinel-5P methane imagery, filters to the Dandora analysis region/date window, removes null values, and stores the published column-averaged dry-air mixing ratio in ppb. The Earth Engine L3 collection is already filtered during ingestion using the product's validity threshold. No raster files are stored in PostgreSQL. If Earth Engine credentials/network are unavailable, ingestion exits with a clear error; only `fixture` mode is used for the demo.
+
+The frontend uses `/api` by default and Vite proxies it to `http://localhost:8080` during local development. If the deployed API is on a separate origin, set `VITE_API_URL` at frontend build time (for example, `https://api.example.com/api`).
 
 ## API
 

@@ -54,6 +54,10 @@ func (r Repo) UpsertAnomaly(ctx context.Context, o models.Observation, b, d, z f
 	_, err := r.DB.Exec(ctx, `INSERT INTO anomalies(observation_id,baseline,deviation_percent,z_score,severity) VALUES($1,$2,$3,$4,$5) ON CONFLICT(observation_id) DO UPDATE SET baseline=$2,deviation_percent=$3,z_score=$4,severity=$5`, o.ID, b, d, z, severity)
 	return err
 }
+func (r Repo) DeleteAnomaly(ctx context.Context, observationID int) error {
+	_, err := r.DB.Exec(ctx, `DELETE FROM anomalies WHERE observation_id=$1`, observationID)
+	return err
+}
 func (r Repo) Anomalies(ctx context.Context, siteID int) ([]models.Anomaly, error) {
 	rows, err := r.DB.Query(ctx, `SELECT a.id,a.observation_id,o.observed_at,o.value,a.baseline,a.deviation_percent,a.z_score,a.severity FROM anomalies a JOIN observations o ON o.id=a.observation_id WHERE o.site_id=$1 ORDER BY o.observed_at DESC`, siteID)
 	if err != nil {
