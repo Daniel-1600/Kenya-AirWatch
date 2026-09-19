@@ -63,6 +63,23 @@ The adapter is intentionally isolated in `backend/internal/services/satellite`. 
 
 The frontend uses `/api` by default and Vite proxies it to `http://localhost:8080` during local development. If the deployed API is on a separate origin, set `VITE_API_URL` at frontend build time (for example, `https://api.example.com/api`).
 
+## Deploy to Render
+
+The repository includes a [`render.yaml`](render.yaml) Blueprint that creates:
+
+- a static frontend on Render's global CDN;
+- a paid 512 MB Go API in Frankfurt;
+- a paid PostgreSQL 16 database with 1 GB of storage in Frankfurt.
+
+The API runs the fixture ingestion once after its first successful deploy, so the dashboard has demo data immediately. The baseline is approximately $13.30/month at the prices current in September 2026 ($7 API, $6 database compute, and about $0.30 for 1 GB of database storage), excluding usage beyond Render's included allowances.
+
+1. Push this repository to GitHub.
+2. In the Render Dashboard, select **New → Blueprint** and connect the repository.
+3. Confirm that Render found `render.yaml`, then apply the Blueprint.
+4. When both services are live, open `https://dandora-airwatch.onrender.com`.
+
+The Blueprint keeps PostgreSQL off the public internet and uses its private connection string. It deploys `SATELLITE_MODE=fixture`; Earth Engine requires separate credentials and is intentionally not enabled by this deployment.
+
 ## API
 
 - `GET /api/sites`
@@ -87,6 +104,12 @@ UV_CACHE_DIR=/tmp/dandora-uv-cache uv run --with rasterio python scripts/build_c
 ```
 
 The case study is kept separate from fixture-mode operational data and is visibly labeled as authentic satellite evidence in the interface.
+
+## User validation
+
+The [user-validation protocol](docs/USER_VALIDATION.md) defines two short sessions for a local environmental practitioner and an environmental-data user. It tests scientific comprehension, completion of the alert-to-investigation workflow, trust, and practical decision value. Use the [session note template](docs/validation/SESSION_TEMPLATE.md) during each interview and record only completed evidence in the [validation summary](docs/validation/SUMMARY.md).
+
+**Current status:** the protocol and evidence templates are ready; participant sessions have not yet been conducted. The project does not claim user validation until real sessions are documented.
 
 ## Limitations
 
