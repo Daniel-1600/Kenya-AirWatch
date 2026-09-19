@@ -15,7 +15,11 @@ import (
 
 func main() {
 	ctx := context.Background()
-	db, err := database.Open(ctx, config.Get("DATABASE_URL", "postgres://airwatch:airwatch@localhost:5432/airwatch?sslmode=disable"))
+	connectTimeout, err := time.ParseDuration(config.Get("DATABASE_CONNECT_TIMEOUT", "0s"))
+	if err != nil {
+		panic(err)
+	}
+	db, err := database.OpenWithRetry(ctx, config.Get("DATABASE_URL", "postgres://airwatch:airwatch@localhost:5432/airwatch?sslmode=disable"), connectTimeout)
 	if err != nil {
 		panic(err)
 	}

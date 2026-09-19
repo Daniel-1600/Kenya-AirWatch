@@ -16,6 +16,8 @@ services:
         fromDatabase:
           name: dandora-airwatch-db
           property: connectionString
+      - key: DATABASE_CONNECT_TIMEOUT
+        value: 5m
       - key: SATELLITE_MODE
         value: fixture
       - key: INGEST_DAYS

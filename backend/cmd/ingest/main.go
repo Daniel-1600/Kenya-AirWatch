@@ -27,7 +27,11 @@ func main() {
 	} else {
 		provider = satellite.FixtureProvider{}
 	}
-	db, err := database.Open(ctx, url)
+	connectTimeout, err := time.ParseDuration(config.Get("DATABASE_CONNECT_TIMEOUT", "0s"))
+	if err != nil {
+		panic(err)
+	}
+	db, err := database.OpenWithRetry(ctx, url, connectTimeout)
 	if err != nil {
 		panic(err)
 	}
